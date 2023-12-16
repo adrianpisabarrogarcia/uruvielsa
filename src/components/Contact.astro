@@ -3,26 +3,22 @@
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     const formData = new FormData(form);
-    let bodyContent = JSON.stringify({
-      name: formData.get("name"),
-      email: formData.get("email"),
-      message: formData.get("message"),
-    });
-    fetch("/api/sendMails", {
+    fetch("https://formspree.io/f/mnqeanrw", {
       method: "POST",
       headers: {
         Accept: "application/json",
       },
-      body: bodyContent,
-    }).then((response) => () => {
-      if (response.status === 200) {
-        alert("Mensaje enviado correctamente");
-        form.reset();
-      } else {
-        alert("Error al enviar el mensaje");
-        console.error(response);
-      }
-    });
+      body: formData,
+    })
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.ok) {
+            alert("Mensaje enviado correctamente");
+            form.reset();
+          } else {
+            alert("Error al enviar el mensaje");
+          }
+        });
   });
 </script>
 
