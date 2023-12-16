@@ -2,6 +2,9 @@ import service from '@astrojs/vercel/build-image-service';
 import type { APIRoute } from 'astro';
 import nodemailer from 'nodemailer';
 
+export const config = {
+    runtime: 'server',
+};
 
 export const POST: APIRoute = async ({ request }) => {
     try {
