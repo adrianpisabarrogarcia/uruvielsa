@@ -1,6 +1,6 @@
 import service from '@astrojs/vercel/build-image-service';
 import type { APIRoute } from 'astro';
-import nodemailer from 'nodemailer';
+//import nodemailer from 'nodemailer';
 
 export const config = {
     runtime: 'server',
@@ -12,7 +12,7 @@ export const POST: APIRoute = async ({ request }) => {
         const name = body.name;
         const email = body.email;
         const message = body.message;
-
+        /*
         const transporter = nodemailer.createTransport({
             host: "smtp.gmail.com",
             port: 587,
@@ -43,7 +43,7 @@ export const POST: APIRoute = async ({ request }) => {
             }
             console.log(`Mensaje enviado: ${info.messageId}`);
         });
-
+        */
 
         return new Response(
             JSON.stringify({
