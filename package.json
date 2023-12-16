@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^5.0.2",
     "astro": "^3.4.4",
+    "nodemailer": "^6.9.7",
     "tailwindcss": "^3.0.24"
   }
 }
