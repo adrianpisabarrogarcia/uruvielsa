@@ -1,20 +1,31 @@
-<nav
-        class="sticky top-6 z-50 backdrop-blur-md bg-slate-200/60 shadow-2xl rounded-lg p-4"
->
+<script>
+  document.getElementById("menu-home").addEventListener("click", () => {
+    document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+  });
+  document.getElementById("menu-animation").addEventListener("click", () => {
+    document.getElementById("animation").scrollIntoView({ behavior: "smooth" });
+  });
+  document.getElementById("menu-design").addEventListener("click", () => {
+    document.getElementById("design").scrollIntoView({ behavior: "smooth" });
+  });
+  document.getElementById("menu-contact").addEventListener("click", () => {
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+  });
+</script>
+
+<nav class="sticky top-6 z-50 backdrop-blur-md bg-slate-200/60 shadow-2xl rounded-lg p-4">
     <ul class="flex flex-row justify-center">
         <li>
-            <a href="#home" class="rounded py-2 px-4 hover:bg-slate-300">Inicio</a>
+            <button id="menu-home" class="rounded py-2 px-4 hover:bg-slate-300">Inicio</button>
         </li>
         <li>
-            <a href="#animation" class="rounded py-2 px-4 hover:bg-slate-300">Animación</a>
+          <button id="menu-animation" class="rounded py-2 px-4 hover:bg-slate-300">Animación</button>
         </li>
-      <!--
         <li>
-            <a href="#design" class="rounded py-2 px-4 hover:bg-slate-300">Diseño</a>
+          <button id="menu-design" class="rounded py-2 px-4 hover:bg-slate-300">Diseño</button>
         </li>
-        -->
         <li>
-            <a href="#contact" class="rounded py-2 px-4 hover:bg-slate-300">Contacto</a>
+          <button id="menu-contact" class="rounded py-2 px-4 hover:bg-slate-300">Contacto</button>
         </li>
     </ul>
 </nav>
