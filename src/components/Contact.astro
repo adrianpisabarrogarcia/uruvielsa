@@ -10,15 +10,15 @@
       },
       body: formData,
     })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.ok) {
-          alert("Mensaje enviado correctamente");
-          form.reset();
-        } else {
-          alert("Error al enviar el mensaje");
-        }
-      });
+        .then((response) => response.json())
+        .then((data) => {
+          if (data.ok) {
+            alert("Mensaje enviado correctamente");
+            form.reset();
+          } else {
+            alert("Error al enviar el mensaje");
+          }
+        });
   });
 </script>
 
@@ -54,7 +54,7 @@
         <label for="message" class="text-sm font-semibold">Mensaje:</label>
         <textarea
           id="message"
-          class="rounded-lg border border-slate-200 p-2h h-28"
+          class="rounded-lg border border-slate-200 p-2 h-28"
           name="message"
           required></textarea>
       </div>
@@ -62,7 +62,7 @@
     <div class="flex justify-start md:ms-3">
       <button
         type="submit"
-        class="inline-block bg-yellow-personal border-2 hover:bg-white text-white hover:text-gray-700 font-normal py-2 px-14 rounded-lg mt-2 flex justify-center items-center"
+        class="inline-block bg-yellow-personal border-2 hover:bg-white text-white hover:text-gray-700 font-normal py-2 px-10 rounded-lg mt-2 flex justify-center items-center"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
