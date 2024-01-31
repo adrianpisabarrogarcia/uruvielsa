@@ -10,16 +10,29 @@
       },
       body: formData,
     })
-        .then((response) => response.json())
-        .then((data) => {
-          if (data.ok) {
-            alert("Mensaje enviado correctamente");
-            form.reset();
-          } else {
-            alert("Error al enviar el mensaje");
-          }
-        });
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.ok) {
+          showMessage(true);
+          form.reset();
+        } else {
+          showMessage(false);
+          console.error("Error al enviar el mensaje", data);
+        }
+      });
   });
+
+  function showMessage(isSuccess) {
+    const messageElement = document.getElementById(
+      isSuccess ? "successMessage" : "errorMessage"
+    );
+    messageElement.classList.remove("hidden");
+    messageElement.classList.add("visible");
+    setTimeout(() => {
+      messageElement.classList.remove("visible");
+      messageElement.classList.add("hidden");
+    }, 5000);
+  }
 </script>
 
 <section id="contact" class="mt-4 mb-4 bg-slate-100 rounded-lg p-5">
@@ -59,7 +72,7 @@
           required></textarea>
       </div>
     </div>
-    <div class="flex justify-start md:ms-3">
+    <div class="flex justify-start items-center md:ms-3">
       <button
         type="submit"
         class="inline-block bg-yellow-personal border-2 hover:bg-white text-white hover:text-gray-700 font-normal py-2 px-10 rounded-lg mt-2 flex justify-center items-center"
@@ -75,10 +88,26 @@
             d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"
           ></path>
         </svg>
-         &nbsp; &nbsp; Enviar
+        &nbsp; &nbsp; Enviar
       </button>
+      <span class="ml-7 mt-2 text-[#1ec996] hidden" id="successMessage">
+        Mensaje enviado correctamente.</span
+      >
+      <span class="ml-7 mt-2 text-[#c91e65] hidden" id="errorMessage">
+        Ha habido un problema enviando el correo, inténtelo de nuevo.</span
+      >
     </div>
   </form>
 
-  <style></style>
+  <style>
+    .hidden {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .visible {
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+    }
+  </style>
 </section>
