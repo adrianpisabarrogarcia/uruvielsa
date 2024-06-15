@@ -1,0 +1,62 @@
+---
+import IconYoutube from "./icons/IconYouTube.astro";
+import IconKofi from "./icons/IconKo-fi.astro";
+import IconDemoreel from "./icons/IconDemoreel.astro";
+import IconInstagram from "./icons/IconInstagram.astro";
+const socialLinks = [
+  {
+    text: "YouTube",
+    href: "https://www.youtube.com/channel/UCKLBOJmYueVQ6lN033CzSxw",
+  },
+  {
+    text: "Ko-fi",
+    href: "https://ko-fi.com/flordeldesierto",
+  },
+  {
+    text: "Demoreel",
+    href: "https://youtu.be/M97AmcdxHpA?si=BPClu9akostrGfRQ",
+  },
+  {
+    text: "Instagram",
+    href: "https://www.instagram.com/uruvielsa",
+  },
+];
+---
+
+<main class="pt-12 flex flex-col justify-center items-center w-full">
+  {
+    socialLinks.map((link) => (
+      <a
+        class="w-full flex flex-row justify-center items-center border-2
+       border-slate-300 bg-blue-personal rounded-full px-5 py-2 hover:bg-yellow-personal-light
+       text-white transition-colors duration-300 ease-in-out mb-4 text-bold"
+        href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {link.text === "YouTube" && <IconYoutube />}
+        {link.text === "Ko-fi" && <IconKofi />}
+        {link.text === "Demoreel" && <IconDemoreel />}
+        {link.text === "Instagram" && <IconInstagram />}
+        {link.text}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="12"
+          height="12"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="icon icon-tabler icons-tabler-outline icon-tabler-external-link ms-2"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6" />
+          <path d="M11 13l9 -9" />
+          <path d="M15 4h5v5" />
+        </svg>
+      </a>
+    ))
+  }
+</main>
