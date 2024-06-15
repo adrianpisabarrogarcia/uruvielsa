@@ -4,6 +4,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const atMiddle = title === "Uruvielsa Links 🔗";
 ---
 
 <!doctype html>
@@ -14,12 +15,38 @@ const { title } = Astro.props;
       name="description"
       content="Portfolio de Nazareth, una muestra de maestría única en animación y diseño. Descubre una galería vívida de animaciones 2D/3D, proyectos de diseño gráfico y soluciones creativas que dan vida a historias. Sumérgete en el mundo de diseños innovadores y experiencias de animación transformadoras de Nazareth."
     />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="favicon.png" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="keywords"
+      content="animación, diseño gráfico, animación 2D, animación 3D, portfolio, Nazareth, creatividad"
+    />
+    <meta property="og:title" content="{title}" />
+    <meta
+      property="og:description"
+      content="Portfolio de Nazareth, una muestra de maestría única en animación y diseño. Descubre una galería vívida de animaciones 2D/3D, proyectos de diseño gráfico y soluciones creativas que dan vida a historias."
+    />
+    <meta property="og:image" content="/uruvielsa_compress.gif" />
+    <meta property="og:url" content="https://uruvielsa.com" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{title}" />
+    <meta
+      name="twitter:description"
+      content="Portfolio de Nazareth, una muestra de maestría única en animación y diseño."
+    />
+    <meta name="twitter:image" content="/uruvielsa_compress.gif" />
+    <link rel="canonical" href="https://uruvielsa.com" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="icon" sizes="192x192" href="favicon.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="flex justify-center min-h-screen bg-white" id="home">
+  <body
+    class={`flex items-center justify-center bg-white ${atMiddle ? "min-h-screen" : ""}`}
+  >
     <div class="w-full max-w-4xl mx-auto px-4 py-6">
       <slot />
     </div>

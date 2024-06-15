@@ -16,6 +16,8 @@ export default {
 			colors: {
 				'blue-personal': '#0094D1',
 				'yellow-personal': '#FDB827',
+				'blue-personal-light': '#7FDBF1',
+				'yellow-personal-light': '#D36C11',
 			}
 		},
 	},
