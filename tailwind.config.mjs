@@ -16,11 +16,14 @@ export default {
 			colors: {
 				'blue-personal': '#0094D1',
 				'yellow-personal': '#FDB827',
+				'yellow-personal-light2': '#f7cc72',
 				'blue-personal-light': '#7FDBF1',
 				'yellow-personal-light': '#D36C11',
 			},
 			fontFamily: {
-				sans: ['Montserrat', 'sans-serif']
+				sans: ['Montserrat', 'sans-serif'],
+				bold: ['Montserrat', 'sans-serif'],
+				black: ['Montserrat', 'sans-serif'],
 			}
 		},
 	},
