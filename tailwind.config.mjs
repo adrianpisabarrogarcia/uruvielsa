@@ -20,7 +20,8 @@ export default {
 				'yellow-personal-light': '#D36C11',
 			},
 			fontFamily: {
-				sans: ['Montserrat', 'sans-serif']
+				sans: ['Montserrat', 'sans-serif'],
+				bold: ['Montserrat', 'sans-serif']
 			}
 		},
 	},

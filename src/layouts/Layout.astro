@@ -45,7 +45,7 @@ const atMiddle = title === "Uruvielsa Links 🔗";
     <title>{title}</title>
   </head>
   <body
-    class={`font-sans flex items-center justify-center bg-white ${atMiddle ? "min-h-screen" : ""}`}
+    class={`flex items-center justify-center bg-white ${atMiddle ? "min-h-screen" : ""}`}
   >
     <div class="w-full max-w-4xl mx-auto px-4 py-6">
       <slot />
@@ -55,8 +55,15 @@ const atMiddle = title === "Uruvielsa Links 🔗";
 <style is:global>
   @font-face {
     font-family: "Montserrat";
-    src: url("/fonts/Montserrat/Montserrat-Regular.ttf") format("ttf");
+    src: url("/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
     font-weight: 400;
     font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Montserrat";
+    src: url("/fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: bold;
   }
 </style>
