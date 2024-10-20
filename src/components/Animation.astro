@@ -1,16 +1,156 @@
-<section id="animation" class="pt-32 mb-4">
-  <article class="mt-4 mb-4 bg-slate-100 rounded-lg p-5">
-    <h2 class="text-3xl font-bold md:text-center mt-5 mb-5 md:ms-4">
-      📹&nbsp;&nbsp;Demo Reel
+---
+import { YouTube } from "@astro-community/astro-embed-youtube";
+---
+
+<section id="animation" class="mt-32 md:mt-0 md:pt-20">
+  <h2 class="text-5xl text-blue-personal font-black text-center md:text-start">
+    ANIMACIÓN
+  </h2>
+  <p class="text-sm text-center md:text-start">Defensora del 2D</p>
+  <article class="mt-6 mb-4">
+    <h2 class="mt-5 mb-5 flex items-center text-2xl font-light">
+      <div class="w-4 h-4 bg-blue-personal transform rotate-45"></div>
+      <span class="ml-4">DEMOREEL + Ejercicios</span>
     </h2>
-    <div>
-      <iframe
-        class="w-full rounded-lg min-h-[450px]"
-        src="https://www.youtube.com/embed/L6NbLT-KOxE?si=C1q1-ogwu7SY17mh"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
+    <div class="w-full aspect-video">
+      <YouTube
+        id="L6NbLT-KOxE"
+        class="w-full rounded-2xl max-w-full hover:shadow-xl transition-all duration-500 hover:border-blue-personal hover:border-4 hover:cursor-pointer"
+      />
+    </div>
+    <div class="grid grid-cols-3 gap-4 mt-4" id="animation-gallery">
+      <img
+        src="/img/animation-3.webp"
+        alt="Ejercicio de Animación: Small objects"
+        class="w-full rounded-2xl max-w-full hover:shadow-xl transition-all duration-500 hover:border-blue-personal hover:border-4 hover:cursor-pointer"
+      />
+      <img
+        src="/img/animation-2.webp"
+        alt="Ejercicio de Animación: Pokemon"
+        class="w-full rounded-2xl max-w-full hover:shadow-xl transition-all duration-500 hover:border-blue-personal hover:border-4 hover:cursor-pointer"
+      />
+      <img
+        src="/img/animation-1.webp"
+        alt="Ejercicio de Animación VFX: Fish"
+        class="w-full rounded-2xl max-w-full hover:shadow-xl transition-all duration-500 hover:border-blue-personal hover:border-4 hover:cursor-pointer"
+      />
     </div>
   </article>
+
+  <article class="mt-12 mb-4">
+    <h2 class="mt-5 mb-5 flex items-center text-2xl font-light">
+      <div class="w-4 h-4 bg-blue-personal transform rotate-45"></div>
+      <span class="ml-4">Calzas (conrtometraje)</span>
+    </h2>
+    <div class="w-full aspect-video">
+      <YouTube
+        id="x-GI7JzKOhk"
+        class="w-full rounded-2xl max-w-full hover:shadow-xl transition-all duration-500 hover:border-blue-personal hover:border-4 hover:cursor-pointer"
+      />
+    </div>
+  </article>
+
+  <!-- Modal -->
+  <div
+    id="modal"
+    class="fixed inset-0 flex items-center justify-center bg-blue-personal-light bg-opacity-50 z-50 opacity-0 pointer-events-none transition-opacity duration-500"
+  >
+    <div
+      class="bg-white p-6 rounded-lg shadow-lg max-w-7xl w-full transform scale-90 transition-transform duration-500"
+      id="modal-content"
+    >
+      <div class="flex justify-between items-center">
+        <h2 class="text-xl font-semibold mb-4" id="modal-title"></h2>
+        <button
+          class="bg-blue-personal text-white p-1 rounded-full"
+          id="close-modal-button"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-x"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="mt-4">
+        <img
+          src=""
+          alt="Animación"
+          class="w-full rounded-2xl"
+          id="modal-image"
+        />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const images = document.querySelectorAll("#animation-gallery img");
+    const modal = document.getElementById("modal");
+    const modalContent = document.getElementById("modal-content");
+    const modalTitle = document.getElementById(
+      "modal-title"
+    ) as HTMLHeadingElement;
+    const modalImage = document.getElementById(
+      "modal-image"
+    ) as HTMLImageElement;
+    const closeModalButton = document.getElementById("close-modal-button");
+
+    images.forEach((image) => {
+      image.addEventListener("click", () => {
+        const imageSrc = image.getAttribute("src");
+        const imageAlt = image.getAttribute("alt");
+        openModal(imageSrc, imageAlt);
+      });
+    });
+
+    function openModal(imageSrc, imageAlt) {
+      modalImage.src = imageSrc;
+      modalTitle.textContent = imageAlt;
+
+      // Muestra el modal con animación
+      modal.classList.remove("opacity-0", "pointer-events-none");
+      modal.classList.add("opacity-100", "pointer-events-auto");
+
+      // Anima el contenido del modal
+      modalContent.classList.remove("scale-90");
+      modalContent.classList.add("scale-100");
+    }
+
+    closeModalButton.addEventListener("click", closeModal);
+
+    function closeModal() {
+      // Oculta el modal con animación inversa
+      modal.classList.remove("opacity-100", "pointer-events-auto");
+      modal.classList.add("opacity-0", "pointer-events-none");
+
+      // Anima el contenido del modal
+      modalContent.classList.remove("scale-100");
+      modalContent.classList.add("scale-90");
+    }
+
+    // Cerrar el modal al hacer clic fuera de él
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Cerrar el modal al presionar la tecla Esc
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closeModal();
+      }
+    });
+  </script>
 </section>
