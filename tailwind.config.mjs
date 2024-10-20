@@ -14,10 +14,10 @@ export default {
 				'1.5-xl': '1.2rem' //to use the class is text-1.txs
 			},
 			colors: {
-				'blue-personal': '#0094D1',
-				'yellow-personal': '#FDB827',
+				'blue-personal': '#0B90C6',
+				'yellow-personal': '#EEAC29',
 				'yellow-personal-light2': '#f7cc72',
-				'blue-personal-light': '#7FDBF1',
+				'blue-personal-light': '#80DDF3',
 				'yellow-personal-light': '#D36C11',
 			},
 			fontFamily: {
