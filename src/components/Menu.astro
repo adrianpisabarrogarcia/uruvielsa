@@ -8,26 +8,52 @@
   /*document.getElementById("menu-design").addEventListener("click", () => {
     document.getElementById("design").scrollIntoView({ behavior: "smooth" });
   });*/
+  /*document.getElementById("menu-ilustration").addEventListener("click", () => {
+    document.getElementById("ilustration").scrollIntoView({ behavior: "smooth" });
+  });*/
   document.getElementById("menu-contact").addEventListener("click", () => {
     document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
   });
 </script>
 
-<nav class="sticky top-6 z-50 backdrop-blur-md bg-slate-200/60 shadow-2xl rounded-lg p-4">
-    <ul class="flex flex-row justify-center">
-        <li>
-            <button id="menu-home" class="rounded py-2 px-4 hover:bg-slate-300">Inicio</button>
-        </li>
-        <li>
-          <button id="menu-animation" class="rounded py-2 px-4 hover:bg-slate-300">Animación</button>
-        </li>
-        <!--
-        <li>
-          <button id="menu-design" class="rounded py-2 px-4 hover:bg-slate-300">Diseño</button>
-        </li>
-        -->
-        <li>
-          <button id="menu-contact" class="rounded py-2 px-4 hover:bg-slate-300">Contacto</button>
-        </li>
-    </ul>
+<nav
+  class="font-bold text-sm md:sticky top-0 bg-white md:pt-5 md:pb-5 md:ps-5 md:pe-5"
+>
+  <ul class="flex flex-row justify-center flex-wrap">
+    <li>
+      <button
+        id="menu-home"
+        class="rounded py-2 px-4 hover:bg-yellow-personal-light2 hover:transition-all"
+        >INICIO</button
+      >
+    </li>
+    <li>
+      <button
+        id="menu-animation"
+        class="rounded py-2 px-4 hover:bg-yellow-personal-light2 hover:transition-all"
+        >ANIMACIÓN</button
+      >
+    </li>
+    <li>
+      <button
+        id="menu-design"
+        class="rounded py-2 px-4 hover:bg-yellow-personal-light2 hover:transition-all"
+        >DISEÑO</button
+      >
+    </li>
+    <li>
+      <button
+        id="menu-ilustration"
+        class="rounded py-2 px-4 hover:bg-yellow-personal-light2 hover:transition-all"
+        >ILUSTRACIÓN</button
+      >
+    </li>
+    <li>
+      <button
+        id="menu-contact"
+        class="rounded py-2 px-4 hover:bg-yellow-personal-light2 hover:transition-all"
+        >CONTACTO</button
+      >
+    </li>
+  </ul>
 </nav>
