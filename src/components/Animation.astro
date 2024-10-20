@@ -1,16 +1,40 @@
-<section id="animation" class="pt-32 mb-4">
-  <article class="mt-4 mb-4 bg-slate-100 rounded-lg p-5">
-    <h2 class="text-3xl font-bold md:text-center mt-5 mb-5 md:ms-4">
-      📹&nbsp;&nbsp;Demo Reel
+---
+import { YouTube } from "@astro-community/astro-embed-youtube";
+---
+
+<section id="animation" class="mt-32 md:mt-10">
+  <h2 class="text-5xl text-blue-personal font-black text-center md:text-start">
+    ANIMACIÓN
+  </h2>
+  <p class="text-sm text-center md:text-start">Defensora del 2D</p>
+  <article class="mt-6 mb-4">
+    <h2 class="mt-5 mb-5 flex items-center text-2xl font-light">
+      <div class="w-4 h-4 bg-blue-personal transform rotate-45"></div>
+      <span class="ml-4">DEMOREEL + Ejercicios</span>
     </h2>
-    <div>
-      <iframe
-        class="w-full rounded-lg min-h-[450px]"
-        src="https://www.youtube.com/embed/L6NbLT-KOxE?si=C1q1-ogwu7SY17mh"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen></iframe>
+    <div class="w-full aspect-video">
+      <YouTube
+        id="L6NbLT-KOxE"
+        class="w-full rounded-2xl max-w-full hover:shadow-xl transition-all duration-500 hover:border-blue-personal hover:border-4 hover:cursor-pointer"
+        children="true"
+      />
+    </div>
+    <div class="grid grid-cols-3 gap-4 mt-4">
+      <img
+        src="/img/animation-3.webp"
+        alt="Animación"
+        class="w-full rounded-2xl max-w-full hover:shadow-xl transition-all duration-500 hover:border-blue-personal hover:border-4 hover:cursor-pointer"
+      />
+      <img
+        src="/img/animation-2.webp"
+        alt="Animación"
+        class="w-full rounded-2xl max-w-full hover:shadow-xl transition-all duration-500 hover:border-blue-personal hover:border-4 hover:cursor-pointer"
+      />
+      <img
+        src="/img/animation-1.webp"
+        alt="Animación"
+        class="w-full rounded-2xl max-w-full hover:shadow-xl transition-all duration-500 hover:border-blue-personal hover:border-4 hover:cursor-pointer"
+      />
     </div>
   </article>
 </section>

@@ -7,13 +7,13 @@ export default defineConfig({
   integrations: [tailwind()],
   output: 'hybrid',
   adapter: vercel(
-      {
-        webAnalytics: {
-          enabled: true,
-        },
-        speedInsights: {
-          enabled: true,
-        },
-      }
+    {
+      webAnalytics: {
+        enabled: true,
+      },
+      speedInsights: {
+        enabled: true,
+      },
+    }
   ),
 });

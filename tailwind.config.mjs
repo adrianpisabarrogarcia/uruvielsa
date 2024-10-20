@@ -24,6 +24,7 @@ export default {
 				sans: ['Montserrat', 'sans-serif'],
 				bold: ['Montserrat', 'sans-serif'],
 				black: ['Montserrat', 'sans-serif'],
+				light: ['Montserrat', 'sans-serif'],
 			}
 		},
 	},
