@@ -18,6 +18,9 @@ export default {
 				'yellow-personal': '#FDB827',
 				'blue-personal-light': '#7FDBF1',
 				'yellow-personal-light': '#D36C11',
+			},
+			fontFamily: {
+				sans: ['Montserrat', 'sans-serif']
 			}
 		},
 	},
