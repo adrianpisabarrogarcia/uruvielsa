@@ -10,14 +10,18 @@ import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Nazareth's Portfolio">
-  <main>
+  <header class="w-full md:fixed top-0 z-50">
     <Menu />
-    <Home />
-    <!--<Next /> -->
-    <Animation />
+  </header>
+  <main>
+    <div class="w-full max-w-4xl mx-auto px-4 py-6">
+      <Home />
+      <!--<Next /> -->
+      <Animation />
+    </div>
     <Contact />
   </main>
-  <footer>
+  <footer class="w-full max-w-4xl mx-auto px-4 py-6">
     <Prefooter />
     <Footer />
   </footer>

@@ -18,6 +18,7 @@ export default {
 				'yellow-personal': '#EEAC29',
 				'yellow-personal-light2': '#f7cc72',
 				'blue-personal-light': '#80DDF3',
+				'yellow-personal-dark': '#D36D10',
 				'yellow-personal-light': '#D36C11',
 			},
 			fontFamily: {

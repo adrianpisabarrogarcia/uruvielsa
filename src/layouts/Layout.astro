@@ -45,11 +45,9 @@ const atMiddle = title === "Uruvielsa Links 🔗";
     <title>{title}</title>
   </head>
   <body
-    class={`flex items-center justify-center bg-white ${atMiddle ? "min-h-screen" : ""}`}
+    class={`bg-white ${atMiddle ? "min-h-screen flex items-center justify-center" : ""}`}
   >
-    <div class="w-full max-w-4xl mx-auto px-4 py-6">
-      <slot />
-    </div>
+    <slot />
   </body>
 </html>
 <style is:global>
