@@ -1,4 +1,4 @@
-<section id="contact" class="mt-24 pt-10 mb-4 bg-yellow-personal-dark pb-32">
+<section id="contact" class="mt-24 pt-10 mb-4 bg-yellow-personal-dark pb-20 md:pb-32">
   <div class="w-full max-w-4xl mx-auto px-4 py-6 text-center md:text-start">
     <h2 class="text-5xl text-white font-black text-center md:text-start">
       CONTACTO
@@ -10,12 +10,20 @@
       src="/img/contact-me.webp"
       alt="Contáctame"
       id="contact-me"
-      class="mt-0 md:mt-[25%] h-96 md:float-left"
+      class="mt-0 mb-0 mx-auto block md:mx-0 md:mt-[25%] h-96 md:float-left"
     />
-    <form class="mt-3 mb-3 w-full" method="POST" enctype="multipart/form-data">
-      <div class="bg-white shadow-md rounded-xl p-10 mt-10 mb-4 ms-64 pe-32">
+    <form
+      class="mt-0 mb-0 md:mt-3 w-full"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <div
+        class="bg-white shadow-md rounded-xl p-10 md:mt-10 md:mb-4 md:ms-64 md:pe-32"
+      >
         <div class="flex flex-col">
-          <label for="name" class="text-sm font-semibold">NOMBRE</label>
+          <label for="name" class="text-sm font-semibold text-left"
+            >NOMBRE</label
+          >
           <input
             type="text"
             id="name"
@@ -24,8 +32,10 @@
             required
           />
         </div>
-        <div class="flex flex-col md:pt-2">
-          <label for="email" class="text-sm font-semibold">E-MAIL</label>
+        <div class="flex flex-col pt-2">
+          <label for="email" class="text-sm font-semibold text-left"
+            >E-MAIL</label
+          >
           <input
             type="email"
             id="email"
@@ -34,8 +44,10 @@
             required
           />
         </div>
-        <div class="flex flex-col md:pt-2">
-          <label for="message" class="text-sm font-semibold">MENSAJE</label>
+        <div class="flex flex-col pt-2">
+          <label for="message" class="text-sm font-semibold text-left"
+            >MENSAJE</label
+          >
           <textarea
             id="message"
             class="rounded-lg border-2 border-yellow-personal-dark p-2 text-yellow-personal-dark"
