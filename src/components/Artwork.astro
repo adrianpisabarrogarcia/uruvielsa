@@ -1,0 +1,171 @@
+---
+import { YouTube } from "@astro-community/astro-embed-youtube";
+---
+
+<section id="artwork" class="mt-32 md:mt-0 md:pt-20">
+  <h2
+    class="text-5xl text-yellow-personal font-black text-center md:text-start"
+  >
+    OBRA
+  </h2>
+  <p class="text-sm text-center md:text-start">
+    Cuadros e ilustraciones de
+    <i>
+      <a
+        href="https://www.instagram.com/flordesierto_art"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:underline"
+      >
+        Flor del desierto
+      </a> /
+      <a
+        href="https://www.instagram.com/uruvielsa"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hover:underline"
+      >
+        uruvielsa
+      </a>
+    </i>
+  </p>
+  <article class="mt-6 mb-4">
+    <div class="mt-5 mb-5 font-light">
+      <h2 class="text-2xl flex items-center">
+        <div class="w-4 h-4 bg-yellow-personal transform rotate-45"></div>
+        <span class="ml-4">Iconos</span>
+      </h2>
+      <p class="ms-8">Iconografía religiosa</p>
+    </div>
+    <div class="grid grid-cols-3 gap-4 mt-4" id="workart-gallery">
+      <article>
+        <img
+          src="/img/workart-una-espada-atravesara-tu-alma.webp"
+          alt="Ejercicio de Animación: Small objects"
+          class="h-96 w-full rounded-b-2xl max-w-full hover:shadow-xl transition-all duration-500 hover:border-yellow-personal hover:border-4"
+        />
+      </article>
+      <article>
+        <img
+          src="/img/workart-sagrada-familia.webp"
+          alt="Ejercicio de Animación: Pokemon"
+          class="h-96 w-full rounded-b-2xl max-w-full hover:shadow-xl transition-all duration-500 hover:border-yellow-personal hover:border-4"
+        />
+      </article>
+      <article>
+        <img
+          src="/img/workart-celoso-defensor-de-cristo.webp"
+          alt="Ejercicio de Animación VFX: Fish"
+          class="h-96 w-full rounded-b-2xl max-w-full hover:shadow-xl transition-all duration-500 hover:border-yellow-personal hover:border-4"
+        />
+      </article>
+    </div>
+  </article>
+
+  <!-- Modal -->
+  <div
+    id="modal"
+    class="fixed inset-0 flex items-center justify-center bg-blue-personal-light bg-opacity-50 z-50 opacity-0 pointer-events-none transition-opacity duration-500"
+  >
+    <div
+      class="bg-white p-6 rounded-lg shadow-lg max-w-7xl w-full transform scale-90 transition-transform duration-500"
+      id="modal-content"
+    >
+      <div class="flex justify-between items-center">
+        <h2 class="text-xl font-semibold mb-4" id="modal-title"></h2>
+        <button
+          class="bg-blue-personal text-white p-1 rounded-full"
+          id="close-modal-button"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-x"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="mt-4">
+        <img
+          src=""
+          alt="Animación"
+          class="w-full rounded-2xl"
+          id="modal-image"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <!--
+  <script>
+    const images = document.querySelectorAll("#animation-gallery img");
+    const modal = document.getElementById("modal");
+    const modalContent = document.getElementById("modal-content");
+    const modalTitle = document.getElementById(
+      "modal-title"
+    ) as HTMLHeadingElement;
+    const modalImage = document.getElementById(
+      "modal-image"
+    ) as HTMLImageElement;
+    const closeModalButton = document.getElementById("close-modal-button");
+
+    images.forEach((image) => {
+      image.addEventListener("click", () => {
+        const imageSrc = image.getAttribute("src");
+        const imageAlt = image.getAttribute("alt");
+        openModal(imageSrc, imageAlt);
+      });
+    });
+
+    function openModal(imageSrc, imageAlt) {
+      modalImage.src = imageSrc;
+      modalTitle.textContent = imageAlt;
+
+      // Muestra el modal con animación
+      modal.classList.remove("opacity-0", "pointer-events-none");
+      modal.classList.add("opacity-100", "pointer-events-auto");
+
+      // Anima el contenido del modal
+      modalContent.classList.remove("scale-90");
+      modalContent.classList.add("scale-100");
+    }
+
+    closeModalButton.addEventListener("click", closeModal);
+
+    function closeModal() {
+      // Oculta el modal con animación inversa
+      modal.classList.remove("opacity-100", "pointer-events-auto");
+      modal.classList.add("opacity-0", "pointer-events-none");
+
+      // Anima el contenido del modal
+      modalContent.classList.remove("scale-100");
+      modalContent.classList.add("scale-90");
+    }
+
+    // Cerrar el modal al hacer clic fuera de él
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Cerrar el modal al presionar la tecla Esc
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closeModal();
+      }
+    });
+  </script>
+-->
+</section>

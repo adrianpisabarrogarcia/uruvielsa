@@ -2,8 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import Menu from "../components/Menu.astro";
 import Home from "../components/Home.astro";
-import Next from "../components/Next.astro";
+//import Next from "../components/Next.astro";
 import Animation from "../components/Animation.astro";
+import Artwork from "../components/Artwork.astro";
 import Contact from "../components/Contact.astro";
 import Prefooter from "../components/Prefooter.astro";
 import Footer from "../components/Footer.astro";
@@ -18,11 +19,12 @@ import Footer from "../components/Footer.astro";
       <Home />
       <!--<Next /> -->
       <Animation />
+      <Artwork />
     </div>
     <Contact />
+    <footer class="w-full max-w-4xl mx-auto px-4 py-6">
+      <Prefooter />
+      <Footer />
+    </footer>
   </main>
-  <footer class="w-full max-w-4xl mx-auto px-4 py-6">
-    <Prefooter />
-    <Footer />
-  </footer>
 </Layout>
