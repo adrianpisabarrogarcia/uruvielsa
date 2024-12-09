@@ -29,7 +29,7 @@ import { YouTube } from "@astro-community/astro-embed-youtube";
       </a>
     </i>
   </p>
-  <article class="mt-6 mb-4">
+  <article class="mt-6 mb-12">
     <div class="mt-5 mb-5 font-light">
       <h2 class="text-2xl flex items-center">
         <div class="w-4 h-4 bg-yellow-personal transform rotate-45"></div>
@@ -37,27 +37,94 @@ import { YouTube } from "@astro-community/astro-embed-youtube";
       </h2>
       <p class="ms-8">Iconografía religiosa</p>
     </div>
-    <div class="grid grid-cols-3 gap-4 mt-4" id="workart-gallery">
-      <article>
+    <div class="grid md:grid-cols-3 gap-4 mt-4" id="workart-gallery">
+      <article
+        class="p-5 md:p-0 rounded-b-2xl hover:p-2 hover:shadow-xl transition-all duration-500 hover:border-yellow-personal hover:border-4"
+      >
         <img
           src="/img/workart-una-espada-atravesara-tu-alma.webp"
           alt="Ejercicio de Animación: Small objects"
-          class="h-96 w-full rounded-b-2xl max-w-full hover:shadow-xl transition-all duration-500 hover:border-yellow-personal hover:border-4"
+          class="md:h-96 w-full rounded-b-2xl max-w-full"
         />
+        <p class="text-2xl mt-2 uppercase font-bold">
+          Una espada atravesará tu alma
+        </p>
+        <p class="text-sm mt-1 uppercase italic">Acrílico sobre lienzo</p>
+        <p class="text-sm mt-1">50x70cm</p>
       </article>
-      <article>
+      <article
+        class="p-5 md:p-0 rounded-b-2xl hover:p-2 hover:shadow-xl transition-all duration-500 hover:border-yellow-personal hover:border-4"
+      >
         <img
           src="/img/workart-sagrada-familia.webp"
           alt="Ejercicio de Animación: Pokemon"
-          class="h-96 w-full rounded-b-2xl max-w-full hover:shadow-xl transition-all duration-500 hover:border-yellow-personal hover:border-4"
+          class="md:h-96 w-full rounded-b-2xl max-w-full"
         />
+        <p class="text-2xl mt-2 uppercase font-bold">Sagrada Familia</p>
+        <p class="text-sm mt-1 uppercase italic">Acrílico sobre lienzo</p>
+        <p class="text-sm mt-1">50x70cm</p>
       </article>
-      <article>
+      <article
+        class="p-5 md:p-0 rounded-b-2xl hover:p-2 hover:shadow-xl transition-all duration-500 hover:border-yellow-personal hover:border-4"
+      >
         <img
           src="/img/workart-celoso-defensor-de-cristo.webp"
           alt="Ejercicio de Animación VFX: Fish"
-          class="h-96 w-full rounded-b-2xl max-w-full hover:shadow-xl transition-all duration-500 hover:border-yellow-personal hover:border-4"
+          class="md:h-96 w-full rounded-b-2xl max-w-full"
         />
+        <p class="text-2xl mt-2 uppercase font-bold">
+          Celoso defensor de Cristo
+        </p>
+        <p class="text-sm mt-1 uppercase italic">Acrílico sobre lienzo</p>
+        <p class="text-sm mt-1">50x70cm</p>
+      </article>
+    </div>
+  </article>
+
+  <article class="mt-6 mb-4">
+    <div class="mt-5 mb-5 font-light">
+      <h2 class="text-2xl flex items-center">
+        <div class="w-4 h-4 bg-yellow-personal transform rotate-45"></div>
+        <span class="ml-4">Digital</span>
+      </h2>
+      <p class="ms-8">Encargos e ilustraciones digitales</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-4 mt-4" id="workart-gallery">
+      <article
+        class="p-5 md:p-0 rounded-b-2xl hover:p-2 hover:shadow-xl transition-all duration-500 hover:border-yellow-personal hover:border-4"
+      >
+        <img
+          src="/img/workart-alejandra.webp"
+          alt="Ejercicio de Animación: Small objects"
+          class="md:h-96 w-full rounded-b-2xl max-w-full"
+        />
+        <p class="text-2xl mt-2 uppercase font-bold">Después de la lluvia</p>
+        <p class="text-sm mt-1 uppercase italic">Encargo retrato</p>
+        <p class="text-sm mt-1">A4</p>
+      </article>
+      <article
+        class="p-5 md:p-0 rounded-b-2xl hover:p-2 hover:shadow-xl transition-all duration-500 hover:border-yellow-personal hover:border-4"
+      >
+        <img
+          src="/img/workart-johnbentley.webp"
+          alt="Ejercicio de Animación: Pokemon"
+          class="md:h-96 w-full rounded-b-2xl max-w-full"
+        />
+        <p class="text-2xl mt-2 uppercase font-bold">Caballero inglés</p>
+        <p class="text-sm mt-1 uppercase italic">Encargo Retrato - Fantasía</p>
+        <p class="text-sm mt-1">A4</p>
+      </article>
+      <article
+        class="p-5 md:p-0 rounded-b-2xl hover:p-2 hover:shadow-xl transition-all duration-500 hover:border-yellow-personal hover:border-4"
+      >
+        <img
+          src="/img/workart-hiuon.webp"
+          alt="Ejercicio de Animación VFX: Fish"
+          class="md:h-96 w-full rounded-b-2xl max-w-full"
+        />
+        <p class="text-2xl mt-2 uppercase font-bold">Repostera en Ciernes</p>
+        <p class="text-sm mt-1 uppercase italic">Ilustración digital</p>
+        <p class="text-sm mt-1">A4</p>
       </article>
     </div>
   </article>
