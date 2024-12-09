@@ -26,6 +26,10 @@ export default {
 				bold: ['Montserrat', 'sans-serif'],
 				black: ['Montserrat', 'sans-serif'],
 				light: ['Montserrat', 'sans-serif'],
+				regular: ['Montserrat', 'sans-serif'],
+				medium: ['Montserrat', 'sans-serif'],
+				semibold: ['Montserrat', 'sans-serif'],
+				thin: ['Montserrat', 'sans-serif'],
 			}
 		},
 	},
