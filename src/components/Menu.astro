@@ -1,19 +1,52 @@
 <script>
+  // Detectar si estamos en la página principal o en otra página
+  const isHomePage = window.location.pathname === '/';
+  
   document.getElementById("menu-home").addEventListener("click", () => {
-    document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+    if (isHomePage) {
+      document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.href = "/";
+    }
   });
+  
   document.getElementById("menu-animation").addEventListener("click", () => {
-    document.getElementById("animation").scrollIntoView({ behavior: "smooth" });
+    if (isHomePage) {
+      document.getElementById("animation").scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.href = "/#animation";
+    }
   });
-  /*document.getElementById("menu-design").addEventListener("click", () => {
-    document.getElementById("design").scrollIntoView({ behavior: "smooth" });
-  });*/
+  
   document.getElementById("menu-artwork").addEventListener("click", () => {
-    document.getElementById("artwork").scrollIntoView({ behavior: "smooth" });
+    if (isHomePage) {
+      document.getElementById("artwork").scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.href = "/#artwork";
+    }
   });
+  
   document.getElementById("menu-contact").addEventListener("click", () => {
-    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+    if (isHomePage) {
+      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+    } else {
+      window.location.href = "/#contact";
+    }
   });
+  
+  // Para el botón de diseño, si estamos en publicidad-voxel, hacer scroll interno
+  const menuDesign = document.getElementById("menu-design");
+  if (menuDesign) {
+    menuDesign.addEventListener("click", () => {
+      if (window.location.pathname === '/publicidad-voxel') {
+        document.getElementById("publicidad-voxel").scrollIntoView({ behavior: "smooth" });
+      } else if (isHomePage) {
+        document.getElementById("design").scrollIntoView({ behavior: "smooth" });
+      } else {
+        window.location.href = "/publicidad-voxel";
+      }
+    });
+  }
 </script>
 
 <nav
@@ -34,13 +67,13 @@
         >ANIMACIÓN</button
       >
     </li>
-    <!--<li>
+    <li>
       <button
         id="menu-design"
         class="rounded py-2 px-4 hover:bg-yellow-personal-light2 hover:transition-all"
         >DISEÑO</button
       >
-    </li>-->
+    </li>
     <li>
       <button
         id="menu-artwork"
