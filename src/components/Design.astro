@@ -1,0 +1,159 @@
+---
+// Design component with horizontal slider
+---
+
+<section id="design" class="py-16" style="background-color: #0B90C6;">
+  <div class="w-full max-w-4xl mx-auto px-4 py-6">
+    <h2 class="text-5xl text-white font-black text-center md:text-start">
+      DISEÑO
+    </h2>
+    <div class="flex justify-between items-center">
+      <p class="text-sm text-center md:text-start text-blue-100">
+        Conoce mis proyectos más recientes
+      </p>
+      <!-- Navigation arrows -->
+      <div class="flex space-x-2">
+        <button
+          id="prevBtn"
+          class="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300"
+        >
+          <svg
+            class="w-6 h-6 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M15 19l-7-7 7-7"></path>
+          </svg>
+        </button>
+
+        <button
+          id="nextBtn"
+          class="bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300"
+        >
+          <svg
+            class="w-6 h-6 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5l7 7-7 7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="relative mt-6">
+      <!-- Slider container -->
+      <div class="overflow-hidden">
+        <div
+          id="slider"
+          class="flex transition-transform duration-500 ease-in-out"
+        >
+          <!-- Card 1 -->
+          <div class="flex-none w-full md:w-1/3 px-4">
+              <img
+                src="/img/design-voxel-trends.webp"
+                alt="Voxel Trends"
+                class="w-full h-96 object-cover rounded-2xl shadow-xl"
+              />
+              <div class="mt-4">
+                <h3 class="text-2xl font-bold text-white mb-2">VOXEL TRENDS</h3>
+                <p class="text-white font-semibold">CREATIVIDADES</p>
+              </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="flex-none w-full md:w-1/3 px-4">
+              <img
+                src="/img/design-mercadillo-solidario.webp"
+                alt="Mercadillo Solidario"
+                class="w-full h-96 object-cover rounded-2xl shadow-xl"
+              />
+              <div class="mt-4">
+                <h3 class="text-2xl font-bold text-white mb-2">
+                  MERCADILLO SOLIDARIO
+                </h3>
+                <p class="text-white font-semibold">CREATIVIDADES</p>
+              </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="flex-none w-full md:w-1/3 px-4">
+              <img
+                src="/img/design-san-publicito.webp"
+                alt="San Publicito"
+                class="w-full h-96 object-cover rounded-2xl shadow-xl"
+              />
+              <div class="mt-4">
+                <h3 class="text-2xl font-bold text-white mb-2">
+                  SAN PUBLICITO
+                </h3>
+                <p class="text-white font-semibold">CREATIVIDADES</p>
+              </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="flex-none w-full md:w-1/3 px-4">
+              <img
+                src="/img/design-san-publicito.webp"
+                alt="Custodia"
+                class="w-full h-96 object-cover rounded-2xl shadow-xl"
+              />
+              <div class="mt-4">
+                <h3 class="text-2xl font-bold text-white mb-2">CUSTODIA</h3>
+                <p class="text-white font-semibold">DISEÑO</p>
+              </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const slider = document.getElementById("slider");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  let currentIndex = 0;
+  const isMobile = window.innerWidth < 768;
+  const cardsToShow = isMobile ? 1 : 3;
+  const totalCards = 6;
+  const maxIndex = totalCards - cardsToShow;
+
+  function updateSlider() {
+    const translateX = -(currentIndex * (100 / cardsToShow));
+    slider.style.transform = `translateX(${translateX}%)`;
+  }
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex = currentIndex >= maxIndex ? 0 : currentIndex + 1;
+    updateSlider();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex = currentIndex <= 0 ? maxIndex : currentIndex - 1;
+    updateSlider();
+  });
+
+  // Handle window resize
+  window.addEventListener("resize", () => {
+    const newIsMobile = window.innerWidth < 768;
+    const newCardsToShow = newIsMobile ? 1 : 3;
+    const newMaxIndex = totalCards - newCardsToShow;
+
+    if (currentIndex > newMaxIndex) {
+      currentIndex = newMaxIndex;
+    }
+    updateSlider();
+  });
+</script>
